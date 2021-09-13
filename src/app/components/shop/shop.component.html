@@ -1,0 +1,23 @@
+
+
+<button routerLink="/new" class="btn btn-primary p-3 mb-4 ">Add short</button>
+
+<div class="row">
+    <div *ngFor="let short of allShorts" class="card" style="width: 18rem;">
+      <div class="card-body">
+          <img src="https://m.media-amazon.com/images/I/712K8+YmVLL._AC_UL1200_.jpg" class="card-img-top" alt="...">
+        <h5 class="card-title"> Name: {{ short.name }}</h5>
+        <p class="card-text"> Color: {{ short.color }}</p>
+        <p class="card-text">Size: {{ short.size }}</p>
+        <p class="card-text">Price: {{ short.price }} €</p>
+        <small class="card-text"> Id : {{ short.id }}</small><br>
+        <button class="btn btn-danger" (click)="deleteShort(short.id)">Delete</button>
+
+        <div class="form-group">
+            <input type="number" class="form-control" placeholder="Number of short" #quantity>
+        </div>
+
+        <button class="btn btn-success" (click)="addToBasket(short, quantity.value)"> Add to basket:</button>
+      </div>
+    </div>
+</div>

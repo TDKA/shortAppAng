@@ -1,0 +1,33 @@
+<a routerLink="/shop" class="btn btn-primary">Go back</a>
+
+<h3 class="text-center">Create new short:</h3>
+
+<form style="width: 50%;" class="mx-auto" >
+  <div class="mb-3">
+    
+    <input type="text" class="form-control" placeholder="Name" #name>
+  </div>
+
+  <div class="mb-3">
+    
+    <input type="text" class="form-control" placeholder="Color"  #color>
+  </div>
+
+  <div class="mb-3">
+    
+    <input type="text" class="form-control" placeholder="Size" #size>
+  </div>
+ 
+  <!-- <div class="mb-3">
+    <input type="number" class="form-control" placeholder="Price">
+  </div> -->
+
+  <!-- <div class="mb-3">
+    <label for="price" class="form-label">Price:</label>
+    <input type="text" class="form-control" id="price" #price>
+  </div> -->
+ 
+  <button class="btn btn-primary" (click)="createShort(color.value, size.value, name.value)">Create</button>
+
+
+</form>
